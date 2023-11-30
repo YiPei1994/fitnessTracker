@@ -2,12 +2,12 @@
 ### Fitness Tracker App Structure Plan:
 
 #### 1. **Setup:**
-   - [ ] Initialize a new React project using Create React App or your preferred setup.
-   - [ ] Set up your project structure.
+   - [+] Initialize a new React project using Create React App or your preferred setup.
+   - [+] Set up your project structure.
 
 #### 2. **Navigation:**
-   - [ ] Create a navigation component for easy movement between different sections of your app.
-   - [ ] Implement routing using React Router to navigate between pages.
+   - [+] Create a navigation component for easy movement between different sections of your app.
+   - [+] Implement routing using React Router to navigate between pages.
 
 #### 3. **Homepage:**
    - [ ] Display a welcome message.
