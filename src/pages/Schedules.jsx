@@ -1,7 +1,12 @@
 import React from "react";
+import ListOfExercises from "../features/Workouts/ListOfExercises";
 
 function Schedules() {
-  return <div>Schedules</div>;
+  return (
+    <div>
+      <ListOfExercises />
+    </div>
+  );
 }
 
 export default Schedules;
