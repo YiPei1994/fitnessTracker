@@ -17,10 +17,24 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { CopyIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
+import { useDeleteExercise } from "./useDeleteExercise";
+import ExerciseForm from "./ExerciseForm";
 function Exercise({ data }) {
-  const { id, name, type, sets, reps, pauseTime, instruction, image } = data;
+  const {
+    id: exerciseId,
+    name,
+    type,
+    sets,
+    reps,
+    pauseTime,
+    instruction,
+    image,
+  } = data;
+
+  const { deleteThisExercise, isDeleting } = useDeleteExercise();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Button onClick={onOpen}>{name}</Button>
@@ -43,7 +57,7 @@ function Exercise({ data }) {
                   Reps: {reps}
                 </Badge>
                 <Badge colorScheme="green" outline="subtle" p="1" m="1">
-                  Breaktime: {pauseTime}
+                  Pausetime: {pauseTime}
                 </Badge>
               </CardHeader>
               <CardBody>
@@ -58,10 +72,12 @@ function Exercise({ data }) {
             <Button colorScheme="blue" mr={3}>
               <CopyIcon />
             </Button>
-            <Button colorScheme="blue" mr={3}>
-              <EditIcon />
-            </Button>
-            <Button colorScheme="red" mr={3}>
+            <Button
+              colorScheme="red"
+              mr={3}
+              disabled={isDeleting}
+              onClick={() => deleteThisExercise(exerciseId)}
+            >
               <DeleteIcon />
             </Button>
           </ModalFooter>

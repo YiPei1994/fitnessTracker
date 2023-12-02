@@ -10,8 +10,8 @@
    - [+] Implement routing using React Router to navigate between pages.
 
 #### 3. **Homepage:**
-   - [ ] Display a welcome message.
-   - [ ] Provide links to different sections like workouts, goals, progress, etc.
+   - [+] Display a welcome message.
+   - [+] Provide links to different sections like workouts, goals, progress, etc.
 
 #### 4. **Workouts:**
    - [ ] Create a page to track workouts.

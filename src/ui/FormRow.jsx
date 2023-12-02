@@ -3,8 +3,9 @@ import styled from "@emotion/styled";
 const StyledFormRow = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 24rem 1fr 1.2fr;
+  grid-template-columns: 12rem 1fr 1.2fr;
   gap: 2.4rem;
+  max-width: 500px;
 
   padding: 1.2rem 0;
 

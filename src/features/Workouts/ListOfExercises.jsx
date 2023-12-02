@@ -6,7 +6,7 @@ import { AddIcon } from "@chakra-ui/icons";
 import ExerciseForm from "./ExerciseForm";
 
 function ListOfExercises() {
-  const { excercises, isLoading } = useReadExercises();
+  const { exercises, isLoading } = useReadExercises();
   const [show, setShow] = useState(false);
   if (isLoading) return <Spinner />;
   return (
@@ -27,12 +27,12 @@ function ListOfExercises() {
       </Flex>
       <Flex>
         <Box w="50%" m="5" p="3">
-          {excercises.map((exercise) => (
-            <Exercise key={exercise.id} data={exercise} />
+          {exercises.map((exercise) => (
+            <Exercise key={exercise.id} data={exercise} setShow={setShow} />
           ))}
         </Box>
         <Box w="50%" m="5" p="3">
-          {show && <ExerciseForm />}
+          {show && <ExerciseForm setShow={setShow} />}
         </Box>
       </Flex>
     </>
